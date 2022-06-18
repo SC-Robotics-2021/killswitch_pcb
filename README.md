@@ -3,6 +3,8 @@ Hard and soft stop pcb for the rover.
 The hard stop cuts power for all subsystems. The soft stop also cuts power but it leaves computing power on. 
 The PCB controls the energization of the Electrical (computing power), Arm, and Drive relay's coil.
 
+The design of the PCB is recorded in [osiris_meta #51](https://github.com/SC-Robotics-2021/osiris_meta/issues/51).
+
 
 ## Materials for the PCB
 - General purpose diodes
@@ -20,14 +22,15 @@ The PCB controls the energization of the Electrical (computing power), Arm, and 
 
 
 ## 02/22/2022 Testing PCB
-During testing, the resistors for the coil (500 ohm, 1/4 W) smoked. Using a higher resistance (1k ohm) fixed the smoking issue, 
-but the resistor got warm in less than a minute. The problem can be fixed using higher wattage resistors, but 
+During testing ([osiris_meta #67](https://github.com/SC-Robotics-2021/osiris_meta/issues/67)), 
+the resistors for the coil (500 ohm, 1/4 W) smoked. Using a higher resistance (6k ohm) fixed the smoking issue, 
+but the resistor got warm. The problem can be fixed using higher wattage resistors, but 
 I didn't have time to get them.
 The resistors were used to limit the current going to the coils as a safety precaution, but the current drawn from 
 the coil is already small, so I opted to not use a resistor and short the endings on the PCB (soldered a wire 
 instead of a resistor). 
 
-PCB works as intended without the coil resistors! The 48-V coil relay warms a little bit after one minute, I read online that
+PCB works as intended without the coil resistors! The 48-V coil relay warms after less than one minute, I read online that
 this is a normal behaviour of relays, but one minute is too little time.   
 
 
